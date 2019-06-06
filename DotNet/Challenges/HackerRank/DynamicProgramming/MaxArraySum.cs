@@ -1,21 +1,15 @@
 ﻿/*
-    Link: https://www.hackerrank.com/challenges/max-array-sum
+    Source: https://www.hackerrank.com/challenges/max-array-sum
+
     Solution Author: Anderson Urbano
-    HackerRank Username: urbanoanderson
 */
 
 using System;
 
-namespace Problems.HackerRank
+namespace HackerRank.MaxArraySum
 {
-    class MaxArraySum : IProblem
+    public class MaxArraySum
     {
-        public void DriverMethod()
-        {
-            int[] input = new int[] { -2, 3, 4, 5, -3, -1, 9 };
-            Console.WriteLine($"Result: {CalculateSubsetSum(input)}");
-        }
-
         public static int CalculateSubsetSum(int[] arr)
         {
             var memory = new int?[arr.Length];

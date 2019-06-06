@@ -1,5 +1,8 @@
 ﻿/*
+    Source: life    
+
     Solution Author: Anderson Urbano
+
     Problem: In a bag of items, each item has a weight represented by
     an integer. If someone can only carry a max o 2 items at a time
     from the bag and has a maximum weight capacity of W, what is the
@@ -9,18 +12,11 @@
 
 using System;
 
-namespace Problems.Other
+namespace Other.BagWeight
 {
-    class BagWeight : IProblem
+    public class BagWeight
     {
-        public void DriverMethod()
-        {
-            int[] items = new int[] { 4, 2, 3, 5, 6 };
-            int maxWeight = 8;
-            Console.WriteLine($"Result: {CalculateMinTrips(items, maxWeight)}");
-        }
-
-        public int CalculateMinTrips(int[] items, int maxWeight)
+        public static int CalculateMinTrips(int[] items, int maxWeight)
         {
             Array.Sort(items);
             int idx_min = 0;
