@@ -72,10 +72,25 @@ namespace Challenges.RatioFinder
         }
 
         [Test]
+        public void IndirectRatioMultiStepSinglePathWithCycles()
+        {
+            ratioFinder.AddRatio("a", "e", 4.0);
+            ratioFinder.AddRatio("a", "c", 2.0);
+            ratioFinder.AddRatio("c", "d", 3.0);
+            ratioFinder.AddRatio("d", "a", 1/6.0);
+            ratioFinder.AddRatio("a", "b", 2.0);
+            ratioFinder.AddRatio("b", "x", 3.0);
+
+            Assert.IsTrue(TestHelper.DoubleEquals(ratioFinder.GetRatio("a", "x"), 6.0));
+            Assert.IsTrue(TestHelper.DoubleEquals(ratioFinder.GetRatio("x", "a"), 1.0/6.0));
+        }
+
+        [Test]
         public void RatioNotFoundThrowsArgumentException()
         {
             Assert.Throws<ArgumentException>(() => this.ratioFinder.GetRatio("a", "c"));
             this.ratioFinder.AddRatio("a", "b", 2.0);
+            this.ratioFinder.AddRatio("c", "d", 2.0);
             Assert.Throws<ArgumentException>(() => this.ratioFinder.GetRatio("a", "c"));
         }
     }
