@@ -4,7 +4,7 @@ namespace Challenges.MatrixClusterCount
 {
     public class MatrixClusterCount_Tests
     {
-        private  static readonly object[] testcases =
+        private static readonly object[] testcases =
         {
             new object[] { new bool[,] { { false } }, 0 },
             new object[] { new bool[,] { { true }, { false } }, 1 },
