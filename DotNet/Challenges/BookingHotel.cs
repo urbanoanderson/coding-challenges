@@ -43,11 +43,13 @@ namespace Challenges.BookingHotel
         public static string Solution(string input)
         {
             var split = input.Replace(" ", string.Empty).Split(":");
-            ClientType clientType = (ClientType) Enum.Parse(typeof(ClientType), split[0]);
             string[] datesStr = split[1].Split(",");
+
+            ClientType clientType = (ClientType) Enum.Parse(typeof(ClientType), split[0]);
             DateTime[] dates = datesStr.Select(x => StringToDateTime(x)).ToArray();
 
             Hotel result = Solution(clientType, dates);
+
             return result.Name;
         }
 
