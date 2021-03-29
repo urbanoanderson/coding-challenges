@@ -13,7 +13,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Challenges.MatrixClusterCount
+namespace Challenges.Solutions.MatrixClusterCount
 {
     public class Cluster
     {

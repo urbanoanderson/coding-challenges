@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace Challenges.LargestRectangle
+namespace Challenges.Solutions.LargestRectangle
 {
     public class LargestRectangle_Tests
     {

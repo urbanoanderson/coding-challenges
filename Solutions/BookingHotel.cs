@@ -8,7 +8,7 @@ using System;
 using System.Linq;
 using System.Globalization;
 
-namespace Challenges.BookingHotel
+namespace Challenges.Solutions.BookingHotel
 {
     public enum ClientType
     {

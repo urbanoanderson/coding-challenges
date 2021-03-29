@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace Challenges.BookingHotel
+namespace Challenges.Solutions.BookingHotel
 {
     public class BookingHotel_Tests
     {

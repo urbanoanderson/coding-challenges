@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Challenges.RangeDictionary
+namespace Challenges.Solutions.RangeDictionary
 {
     public class RangeDictionary_Tests
     {

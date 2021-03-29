@@ -6,7 +6,7 @@
 
 using System;
 
-namespace Challenges.MaxArraySum
+namespace Challenges.Solutions.MaxArraySum
 {
     public class MaxArraySum
     {

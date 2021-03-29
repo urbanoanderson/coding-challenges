@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace Challenges.Candies
+namespace Challenges.Solutions.Candies
 {
     public class Candies_Tests
     {

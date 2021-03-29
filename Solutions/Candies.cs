@@ -7,7 +7,7 @@
 using System;
 using System.Linq;
 
-namespace Challenges.Candies
+namespace Challenges.Solutions.Candies
 {
     public class Candies
     {

@@ -6,7 +6,7 @@
 
 using System;
 
-namespace Challenges.ArrayManipulation
+namespace Challenges.Solutions.ArrayManipulation
 {
     public class ArrayManipulation
     {

@@ -13,7 +13,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Challenges.RatioFinder
+namespace Challenges.Solutions.RatioFinder
 {
     public class RatioFinder
     {

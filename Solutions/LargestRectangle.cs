@@ -11,7 +11,7 @@
 
 using System;
 
-namespace Challenges.LargestRectangle
+namespace Challenges.Solutions.LargestRectangle
 {
     public class LargestRectangle
     {

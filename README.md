@@ -12,4 +12,4 @@ When I begin to solve a challenge in this repository a branch is created for it.
 
 ### .NET
 
-To run challenges implemented in .NET first enter the `dotnet` folder on terminal and run command `dotnet test`
+To run challenges implemented in .NET run command `dotnet test`

@@ -12,7 +12,7 @@
 
 using System;
 
-namespace Challenges.BagWeight
+namespace Challenges.Solutions.BagWeight
 {
     public class BagWeight
     {
