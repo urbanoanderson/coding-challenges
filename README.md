@@ -1,4 +1,4 @@
-[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
+[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/) ![Test Status](https://github.com/urbanoanderson/coding-challenges/actions/workflows/dotnet.yml/badge.svg)
 
 # Coding Challenges
 
