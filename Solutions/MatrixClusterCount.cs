@@ -17,7 +17,7 @@ namespace Challenges.Solutions.MatrixClusterCount
 {
     public class Cluster
     {
-        IDictionary<Tuple<int, int>, bool> cellMap;
+        private readonly IDictionary<Tuple<int, int>, bool> cellMap;
 
         public Cluster()
         {
@@ -62,7 +62,9 @@ namespace Challenges.Solutions.MatrixClusterCount
             foreach (Cluster c in clusters)
             {
                 if (c.HasKey(i, j))
+                {
                     return true;
+                }
             }
 
             return false;
@@ -71,10 +73,14 @@ namespace Challenges.Solutions.MatrixClusterCount
         public static void ExploreCluster(Cluster c, bool[,] matrix, int i, int j)
         {
             if (i < 0 || i >= matrix.GetLength(0))
+            {
                 return;
+            }
 
             if (j < 0 || j >= matrix.GetLength(1))
+            {
                 return;
+            }
 
             if (matrix[i, j] == true && !c.HasKey(i, j))
             {
