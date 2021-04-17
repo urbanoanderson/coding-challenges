@@ -8,7 +8,7 @@ using System;
 
 namespace Challenges.Solutions.ArrayManipulation
 {
-    public class ArrayManipulation
+    public static class ArrayManipulation
     {
         /* Calculates solution by adding the slope increases instead of keeping track of all values*/
         public static long Solution(int n, int[][] queries)
@@ -27,7 +27,9 @@ namespace Challenges.Solutions.ArrayManipulation
 
                 // array[b] -= k (if b is not the last element)
                 if (query[1] < array.Length)
+                {
                     array[query[1]] -= query[2];
+                }
             }
 
             long sum = 0;

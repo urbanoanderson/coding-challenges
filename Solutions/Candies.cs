@@ -11,29 +11,34 @@ namespace Challenges.Solutions.Candies
 {
     public class Candies
     {
-        private int[] _students;
-        private long[] _candies;
+        private int[] students;
+        private long[] candies;
 
         public long CalculateMinCandies(int[] arr)
         {
-            _students = arr;
-            _candies = new long[_students.Length];
-            for (int i = 0; i < _students.Length; i++)
-                _candies[i] = -1;
+            students = arr;
+            candies = new long[students.Length];
 
-            for (int i = 0; i < _students.Length; i++)
+            for (int i = 0; i < students.Length; i++)
+            {
+                candies[i] = -1;
+            }
+
+            for (int i = 0; i < students.Length; i++)
             {
                 ComputeCandiesForIndex(i);
             }
 
-            return _candies.Sum();
+            return candies.Sum();
         }
 
         private void ComputeCandiesForIndex(int i)
         {
             //If value was already calculated or out of bounds
-            if (OutOfBounds(i) || _candies[i] != -1)
+            if (OutOfBounds(i) || candies[i] != -1)
+            {
                 return;
+            }
 
             bool winLeft = Wins(i, i - 1);
             bool winRight = Wins(i, i + 1);
@@ -41,7 +46,7 @@ namespace Challenges.Solutions.Candies
             //Lose to both: A >= B <= C
             if (!winLeft && !winRight)
             {
-                _candies[i] = 1;
+                candies[i] = 1;
                 return;
             }
 
@@ -51,9 +56,11 @@ namespace Challenges.Solutions.Candies
                 ComputeCandiesForIndex(i+1);
 
                 if (NumCandies(i - 1) == -1)
-                    _candies[i - 1] = 1;
+                {
+                    candies[i - 1] = 1;
+                }
 
-                _candies[i] = Math.Max(NumCandies(i - 1) + 1, NumCandies(i + 1) + 1);
+                candies[i] = Math.Max(NumCandies(i - 1) + 1, NumCandies(i + 1) + 1);
                 return;
             }
 
@@ -61,7 +68,7 @@ namespace Challenges.Solutions.Candies
             else if (!winLeft && winRight)
             {
                 ComputeCandiesForIndex(i + 1);
-                _candies[i] = NumCandies(i+1)+1;
+                candies[i] = NumCandies(i+1)+1;
                 return;
             }
 
@@ -69,11 +76,13 @@ namespace Challenges.Solutions.Candies
             else if (winLeft && !winRight)
             {
                 if (NumCandies(i - 1) != -1)
-                    _candies[i] = NumCandies(i - 1) + 1;
+                {
+                    candies[i] = NumCandies(i - 1) + 1;
+                }
                 else
                 {
                     ComputeCandiesForIndex(i + 1);
-                    _candies[i] = NumCandies(i + 1) - 1;
+                    candies[i] = NumCandies(i + 1) - 1;
                 }
                 return;
             }
@@ -82,21 +91,28 @@ namespace Challenges.Solutions.Candies
         private long NumCandies(int i)
         {
             if (OutOfBounds(i))
+            {
                 return 0;
+            }
             else
-                return _candies[i];
+            {
+                return candies[i];
+            }
         }
 
         private bool Wins(int curIdx, int cmpIdx)
         {
-            if (OutOfBounds(curIdx) || OutOfBounds(cmpIdx) || _students[curIdx] <= _students[cmpIdx])
+            if (OutOfBounds(curIdx) || OutOfBounds(cmpIdx) || students[curIdx] <= students[cmpIdx])
+            {
                 return false;
+            }
+
             return true;
         }
 
         private bool OutOfBounds(int i)
         {
-            return (i < 0 || i >= _students.Length);
+            return (i < 0 || i >= students.Length);
         }
     }
 }

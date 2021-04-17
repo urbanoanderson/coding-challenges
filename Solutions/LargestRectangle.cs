@@ -13,7 +13,7 @@ using System;
 
 namespace Challenges.Solutions.LargestRectangle
 {
-    public class LargestRectangle
+    public static class LargestRectangle
     {
         public static long GetMaxArea(int[] h)
         {
@@ -30,10 +30,14 @@ namespace Challenges.Solutions.LargestRectangle
                     long seqPotential = seqMinH * (h.Length - startIdx);
 
                     if(seqPotential <= maxArea)
+                    {
                         break;
+                    }
 
                     if(seqArea > maxArea)
+                    {
                         maxArea = seqArea;
+                    }
                 }
             }
 

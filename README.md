@@ -1,4 +1,4 @@
-[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/) ![Test Status](https://github.com/urbanoanderson/coding-challenges/actions/workflows/dotnet.yml/badge.svg)
+[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/) ![Test Status](https://github.com/urbanoanderson/coding-challenges/actions/workflows/dotnet.yml/badge.svg) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/85f6e203a530421d8a20533f7d47b4f2)](https://www.codacy.com/gh/urbanoanderson/coding-challenges/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=urbanoanderson/coding-challenges&amp;utm_campaign=Badge_Grade)
 
 # Coding Challenges
 

@@ -13,8 +13,11 @@ namespace Challenges.Solutions.RangeDictionary
                 ISet<string> output = data.GetValues(i);
 
                 Assert.IsTrue(output.Count == values.Count);
+
                 foreach (string v in values)
+                {
                     Assert.IsTrue(output.Contains(v));
+                }
             }
         }
 
@@ -26,10 +29,10 @@ namespace Challenges.Solutions.RangeDictionary
             dataStructure.AddRange(3, 5, "B");
             dataStructure.AddRange(4, 10, "C");
 
-            AssertGetValuesMethod(dataStructure, 1, 2, new HashSet<string>() { "A" });
-            AssertGetValuesMethod(dataStructure, 3, 3, new HashSet<string>() { "A", "B" });
-            AssertGetValuesMethod(dataStructure, 4, 5, new HashSet<string>() { "B", "C" });
-            AssertGetValuesMethod(dataStructure, 6, 10, new HashSet<string>() { "C" });
+            AssertGetValuesMethod(dataStructure, 1, 2, new HashSet<string> { "A" });
+            AssertGetValuesMethod(dataStructure, 3, 3, new HashSet<string> { "A", "B" });
+            AssertGetValuesMethod(dataStructure, 4, 5, new HashSet<string> { "B", "C" });
+            AssertGetValuesMethod(dataStructure, 6, 10, new HashSet<string> { "C" });
         }
 
         [Test]
@@ -39,7 +42,7 @@ namespace Challenges.Solutions.RangeDictionary
             dataStructure.AddRange(1, 3, "A");
             dataStructure.AddRange(1, 3, "B");
 
-            AssertGetValuesMethod(dataStructure, 1, 3, new HashSet<string>() { "A", "B" });
+            AssertGetValuesMethod(dataStructure, 1, 3, new HashSet<string> { "A", "B" });
         }
 
         [Test]
@@ -49,8 +52,8 @@ namespace Challenges.Solutions.RangeDictionary
             dataStructure.AddRange(1, 3, "A");
             dataStructure.AddRange(5, 7, "B");
 
-            AssertGetValuesMethod(dataStructure, 1, 3, new HashSet<string>() { "A" });
-            AssertGetValuesMethod(dataStructure, 5, 7, new HashSet<string>() { "B" });
+            AssertGetValuesMethod(dataStructure, 1, 3, new HashSet<string> { "A" });
+            AssertGetValuesMethod(dataStructure, 5, 7, new HashSet<string> { "B" });
         }
 
         [Test]
@@ -70,11 +73,11 @@ namespace Challenges.Solutions.RangeDictionary
             dataStructure.AddRange(15, 20, "B");
             dataStructure.AddRange(4, 18, "C");
 
-            AssertGetValuesMethod(dataStructure, 1, 3, new HashSet<string>() { "A" });
-            AssertGetValuesMethod(dataStructure, 4, 10, new HashSet<string>() { "A", "C" });
-            AssertGetValuesMethod(dataStructure, 11, 14, new HashSet<string>() { "C" });
-            AssertGetValuesMethod(dataStructure, 15, 18, new HashSet<string>() { "C", "B" });
-            AssertGetValuesMethod(dataStructure, 19, 20, new HashSet<string>() { "B" });
+            AssertGetValuesMethod(dataStructure, 1, 3, new HashSet<string> { "A" });
+            AssertGetValuesMethod(dataStructure, 4, 10, new HashSet<string> { "A", "C" });
+            AssertGetValuesMethod(dataStructure, 11, 14, new HashSet<string> { "C" });
+            AssertGetValuesMethod(dataStructure, 15, 18, new HashSet<string> { "C", "B" });
+            AssertGetValuesMethod(dataStructure, 19, 20, new HashSet<string> { "B" });
         }
     }
 }

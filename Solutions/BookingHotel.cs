@@ -31,13 +31,13 @@ namespace Challenges.Solutions.BookingHotel
         public int WeekendPriceReward { get; set; }
     }
 
-    public class BookingHotel
+    public static class BookingHotel
     {
         private static Hotel[] hotels = new Hotel[]
         {
-            new Hotel() { Name = "Lakewood", Classification = 3, WeekPriceRegular = 110, WeekPriceReward = 80, WeekendPriceRegular = 90, WeekendPriceReward = 80 },
-            new Hotel() { Name = "Bridgewood", Classification = 4, WeekPriceRegular = 160, WeekPriceReward = 110, WeekendPriceRegular = 60, WeekendPriceReward = 50 },
-            new Hotel() { Name = "Ridgewood", Classification = 5, WeekPriceRegular = 220, WeekPriceReward = 100, WeekendPriceRegular = 150, WeekendPriceReward = 40 },
+            new Hotel { Name = "Lakewood", Classification = 3, WeekPriceRegular = 110, WeekPriceReward = 80, WeekendPriceRegular = 90, WeekendPriceReward = 80 },
+            new Hotel { Name = "Bridgewood", Classification = 4, WeekPriceRegular = 160, WeekPriceReward = 110, WeekendPriceRegular = 60, WeekendPriceReward = 50 },
+            new Hotel { Name = "Ridgewood", Classification = 5, WeekPriceRegular = 220, WeekPriceReward = 100, WeekendPriceRegular = 150, WeekendPriceReward = 40 },
         };
 
         public static string Solution(string input)
@@ -65,9 +65,13 @@ namespace Challenges.Solutions.BookingHotel
                 foreach (var date in dates)
                 {
                     if (date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday)
+                    {
                         cost += clientType == ClientType.Regular ? hotel.WeekendPriceRegular : hotel.WeekendPriceReward;
+                    }
                     else
+                    {
                         cost += clientType == ClientType.Regular ? hotel.WeekPriceRegular : hotel.WeekPriceReward;
+                    }
                 }
 
                 if (cost < minCost || (cost == minCost && hotel.Classification > result.Classification))

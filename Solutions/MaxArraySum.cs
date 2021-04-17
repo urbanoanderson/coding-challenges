@@ -8,7 +8,7 @@ using System;
 
 namespace Challenges.Solutions.MaxArraySum
 {
-    public class MaxArraySum
+    public static class MaxArraySum
     {
         public static int CalculateSubsetSum(int[] arr)
         {

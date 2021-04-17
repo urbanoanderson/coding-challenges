@@ -17,7 +17,7 @@ namespace Challenges.Solutions.RatioFinder
 {
     public class RatioFinder
     {
-        private Dictionary<string, Dictionary<string, double>> ratioMap;
+        private readonly Dictionary<string, Dictionary<string, double>> ratioMap;
 
         public RatioFinder()
         {
@@ -27,10 +27,14 @@ namespace Challenges.Solutions.RatioFinder
         public void AddRatio(string unitFrom, string unitTo, double ratio)
         {
             if (!this.ratioMap.ContainsKey(unitFrom))
+            {
                 this.ratioMap.Add(unitFrom, new Dictionary<string, double>());
+            }
 
             if (!this.ratioMap.ContainsKey(unitTo))
+            {
                 this.ratioMap.Add(unitTo, new Dictionary<string, double>());
+            }
 
             this.ratioMap[unitFrom].Add(unitTo, ratio);
             this.ratioMap[unitTo].Add(unitFrom, 1.0/ratio);
@@ -92,9 +96,7 @@ namespace Challenges.Solutions.RatioFinder
                 {
                     string neighbor = neighborKeypair.Key;
 
-                    if(marked.Contains(neighbor))
-                        continue;
-                    else
+                    if(!marked.Contains(neighbor))
                     {
                         selectedNeighbor = neighbor;
                         break;
@@ -102,9 +104,13 @@ namespace Challenges.Solutions.RatioFinder
                 }
 
                 if (selectedNeighbor != null)
+                {
                     path.Push(selectedNeighbor);
+                }
                 else
+                {
                     path.Pop();
+                }
             }
 
             return path;

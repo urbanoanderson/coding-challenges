@@ -14,9 +14,9 @@ namespace Challenges.Solutions.FriendCircleQueries
 {
     public class DisjointedSets
     {
-        private Dictionary<int, int> arr;
+        private readonly Dictionary<int, int> arr;
 
-        private Dictionary<int, int> sizes;
+        private readonly Dictionary<int, int> sizes;
 
         public DisjointedSets()
         {
@@ -33,7 +33,9 @@ namespace Challenges.Solutions.FriendCircleQueries
             this.InitElementIfNew(b);
 
             if (this.IsSameSet(a, b))
+            {
                 return;
+            }
 
             int root_a = this.Root(a);
             int root_b = this.Root(b);
@@ -77,7 +79,7 @@ namespace Challenges.Solutions.FriendCircleQueries
         }
     }
 
-    public class FriendCircleQueries
+    public static class FriendCircleQueries
     {
         public static int[] Solution(int[][] queries)
         {
