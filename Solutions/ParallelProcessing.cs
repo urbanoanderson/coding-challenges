@@ -26,7 +26,7 @@ namespace Challenges.Solutions.ParallelProcessing
             {
                 if (file % numCores == 0)
                 {
-                    possiblePar.Add(new ParallelFile() { SingleCoreTime = file, MultiCoreTime = file/numCores });
+                    possiblePar.Add(new ParallelFile { SingleCoreTime = file, MultiCoreTime = file/numCores });
                 }
                 else
                 {
