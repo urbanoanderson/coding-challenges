@@ -6,21 +6,11 @@ namespace Challenges.Solutions.Encryption
     {
         private static readonly object[] testcases =
         {
-            new object[]
-            {
-                "haveaniceday",
-                "hae and via ecy",
-            },
-            new object[]
-            {
-                "feedthedog",
-                "fto ehg ee dd",
-            },
-            new object[]
-            {
-                "chillout",
-                "clu hlt io",
-            },
+            new object[] { " ", "" },
+            new object[] { "a", "a" },
+            new object[] { "haveaniceday", "hae and via ecy" },
+            new object[] { "feedthedog", "fto ehg ee dd" },
+            new object[] { "chillout", "clu hlt io" },
             new object[]
             {
                 "if man was meant to stay on the ground god would have given us roots",
@@ -32,7 +22,7 @@ namespace Challenges.Solutions.Encryption
         public void Tests(string input, string expected)
         {
             var result = Encryption.Solution(input);
-            Assert.IsTrue(result == expected);
+            Assert.IsTrue(result == expected, $"Test Result Received: '{result}'");
         }
     }
 }
