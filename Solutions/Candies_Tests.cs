@@ -1,3 +1,4 @@
+using Challenges.Common;
 using NUnit.Framework;
 
 namespace Challenges.Solutions.Candies
@@ -14,8 +15,8 @@ namespace Challenges.Solutions.Candies
         [TestCase(new int[] { 2, 4, 2, 6, 1, 7, 8, 9, 2, 1 }, 19)]
         public void Tests(int[] input, long expected)
         {
-            long result = (new Candies()).CalculateMinCandies(input);
-            Assert.IsTrue(result == expected);
+            var result = ChallengeSolution.Solve(input);
+            Assert.IsTrue(result == expected, TestHelper.GetTestErrorMessage(result));
         }
     }
 }

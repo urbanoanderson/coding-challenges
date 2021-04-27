@@ -2,7 +2,7 @@
 
 namespace Challenges.Solutions.ArrayManipulation
 {
-    public class ArrayManipulation_Tests
+    public class ChallengeSolution_Tests
     {
         private static readonly object[] testcases =
         {
@@ -16,7 +16,7 @@ namespace Challenges.Solutions.ArrayManipulation
         [Test, TestCaseSource(nameof(testcases))]
         public void Tests(int n, int[][] queries, long expected)
         {
-            long result = ArrayManipulation.Solution(n, queries);
+            var result = ChallengeSolution.Solve(n, queries);
             Assert.IsTrue(result == expected);
         }
     }

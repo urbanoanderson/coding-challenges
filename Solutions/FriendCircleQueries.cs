@@ -79,9 +79,9 @@ namespace Challenges.Solutions.FriendCircleQueries
         }
     }
 
-    public static class FriendCircleQueries
+    public static class ChallengeSolution
     {
-        public static int[] Solution(int[][] queries)
+        public static int[] Solve(int[][] queries)
         {
             DisjointedSets userMap = new DisjointedSets();
             int[] result = new int[queries.Length];

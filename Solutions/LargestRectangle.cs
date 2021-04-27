@@ -13,9 +13,9 @@ using System;
 
 namespace Challenges.Solutions.LargestRectangle
 {
-    public static class LargestRectangle
+    public static class ChallengeSolution
     {
-        public static long GetMaxArea(int[] h)
+        public static long Solve(int[] h)
         {
             long maxArea = h[0];
 

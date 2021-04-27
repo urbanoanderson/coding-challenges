@@ -13,5 +13,10 @@ namespace Challenges.Common
         {
             return Math.Abs(a - b) <= minDiff;
         }
+
+        public static string GetTestErrorMessage(object result)
+        {
+            return $"Result '{result}' does not match expected value";
+        }
     }
 }

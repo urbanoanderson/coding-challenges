@@ -2,7 +2,7 @@ using NUnit.Framework;
 
 namespace Challenges.Solutions.ParallelProcessing
 {
-    public class ParallelProcessing_Tests
+    public class ChallengeSolution_Tests
     {
         private static readonly object[] testcases =
         {
@@ -21,7 +21,7 @@ namespace Challenges.Solutions.ParallelProcessing
         [Test, TestCaseSource(nameof(testcases))]
         public void Tests(int[] files, int cores, int limit, long expected)
         {
-            var result = ParallelProcessing.Solution(files, cores, limit);
+            var result = ChallengeSolution.Solve(files, cores, limit);
             Assert.IsTrue(result == expected);
         }
     }

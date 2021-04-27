@@ -1,8 +1,9 @@
+using Challenges.Common;
 using NUnit.Framework;
 
 namespace Challenges.Solutions.Encryption
 {
-    public class Encryption_Tests
+    public class ChallengeSolution_Tests
     {
         private static readonly object[] testcases =
         {
@@ -21,8 +22,8 @@ namespace Challenges.Solutions.Encryption
         [Test, TestCaseSource(nameof(testcases))]
         public void Tests(string input, string expected)
         {
-            var result = Encryption.Solution(input);
-            Assert.IsTrue(result == expected, $"Test Result Received: '{result}'");
+            var result = ChallengeSolution.Solution(input);
+            Assert.IsTrue(result == expected, TestHelper.GetTestErrorMessage(result));
         }
     }
 }

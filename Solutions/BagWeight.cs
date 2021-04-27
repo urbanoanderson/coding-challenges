@@ -14,7 +14,7 @@ using System;
 
 namespace Challenges.Solutions.BagWeight
 {
-    public static class BagWeight
+    public static class ChallengeSolution
     {
         public static int CalculateMinTrips(int[] items, int maxWeight)
         {

@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace Challenges.Solutions.ParallelProcessing
 {
-    public static class ParallelProcessing
+    public static class ChallengeSolution
     {
         private class ParallelFile
         {
@@ -17,7 +17,7 @@ namespace Challenges.Solutions.ParallelProcessing
             public int Gain { get => SingleCoreTime - MultiCoreTime; }
         }
 
-        public static long Solution(int[] files, int numCores, int limit)
+        public static long Solve(int[] files, int numCores, int limit)
         {
             long minTime = 0;
             List<ParallelFile> possiblePar = new List<ParallelFile>();

@@ -9,12 +9,12 @@ using System.Linq;
 
 namespace Challenges.Solutions.Candies
 {
-    public class Candies
+    public static class ChallengeSolution
     {
-        private int[] students;
-        private long[] candies;
+        private static int[] students;
+        private static long[] candies;
 
-        public long CalculateMinCandies(int[] arr)
+        public static long Solve(int[] arr)
         {
             students = arr;
             candies = new long[students.Length];
@@ -32,7 +32,7 @@ namespace Challenges.Solutions.Candies
             return candies.Sum();
         }
 
-        private void ComputeCandiesForIndex(int i)
+        private static void ComputeCandiesForIndex(int i)
         {
             //If value was already calculated or out of bounds
             if (OutOfBounds(i) || candies[i] != -1)
@@ -88,7 +88,7 @@ namespace Challenges.Solutions.Candies
             }
         }
 
-        private long NumCandies(int i)
+        private static long NumCandies(int i)
         {
             if (OutOfBounds(i))
             {
@@ -100,7 +100,7 @@ namespace Challenges.Solutions.Candies
             }
         }
 
-        private bool Wins(int curIdx, int cmpIdx)
+        private static bool Wins(int curIdx, int cmpIdx)
         {
             if (OutOfBounds(curIdx) || OutOfBounds(cmpIdx) || students[curIdx] <= students[cmpIdx])
             {
@@ -110,7 +110,7 @@ namespace Challenges.Solutions.Candies
             return true;
         }
 
-        private bool OutOfBounds(int i)
+        private static bool OutOfBounds(int i)
         {
             return (i < 0 || i >= students.Length);
         }

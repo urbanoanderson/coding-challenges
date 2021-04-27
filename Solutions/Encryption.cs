@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Challenges.Solutions.Encryption
 {
-    public static class Encryption
+    public static class ChallengeSolution
     {
         private const char INVALID_CHAR = '\0';
 

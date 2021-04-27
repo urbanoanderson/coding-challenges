@@ -8,10 +8,10 @@ using System;
 
 namespace Challenges.Solutions.ArrayManipulation
 {
-    public static class ArrayManipulation
+    public static class ChallengeSolution
     {
         /* Calculates solution by adding the slope increases instead of keeping track of all values*/
-        public static long Solution(int n, int[][] queries)
+        public static long Solve(int n, int[][] queries)
         {
             long[] array = new long[n];
             for (int i = 0; i < n; i++)

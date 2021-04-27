@@ -46,7 +46,7 @@ namespace Challenges.Solutions.MatrixClusterCount
         [Test, TestCaseSource(nameof(testcases))]
         public void Tests(bool[,] input, int expected)
         {
-            int result = MatrixClusterCount.CountClusters(input);
+            var result = ChallengeSolution.Solve(input);
             Assert.IsTrue(result == expected);
         }
     }

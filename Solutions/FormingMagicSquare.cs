@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Challenges.Solutions.FormingMagicSquare
 {
-    public static class FormingMagicSquare
+    public static class ChallengeSolution
     {
         private static List<int[][]> precomputedMagicSquares = new List<int[][]>
         {
@@ -23,7 +23,7 @@ namespace Challenges.Solutions.FormingMagicSquare
             new int[][] { new int[] {2, 7, 6}, new int[] {9, 5, 1}, new int[] {4, 3, 8} },
         };
 
-        public static int Solution(int[][] input)
+        public static int Solve(int[][] input)
         {
             int minCost = int.MaxValue;
 

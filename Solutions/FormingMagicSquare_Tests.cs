@@ -2,7 +2,7 @@ using NUnit.Framework;
 
 namespace Challenges.Solutions.FormingMagicSquare
 {
-    public class FormingMagicSquare_Tests
+    public class ChallengeSolution_Tests
     {
         private static readonly object[] testcases =
         {
@@ -26,7 +26,7 @@ namespace Challenges.Solutions.FormingMagicSquare
         [Test, TestCaseSource(nameof(testcases))]
         public void Tests(int[][] input, int expected)
         {
-            var result = FormingMagicSquare.Solution(input);
+            var result = ChallengeSolution.Solve(input);
             Assert.IsTrue(result == expected);
         }
     }

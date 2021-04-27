@@ -8,9 +8,9 @@ using System;
 
 namespace Challenges.Solutions.MaxArraySum
 {
-    public static class MaxArraySum
+    public static class ChallengeSolution
     {
-        public static int CalculateSubsetSum(int[] arr)
+        public static int Solve(int[] arr)
         {
             var memory = new int?[arr.Length];
             return CalculateSubsetSum(0, arr, ref memory);

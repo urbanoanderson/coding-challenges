@@ -35,9 +35,9 @@ namespace Challenges.Solutions.MatrixClusterCount
         }
     }
 
-    public static class MatrixClusterCount
+    public static class ChallengeSolution
     {
-        public static int CountClusters(bool[,] matrix)
+        public static int Solve(bool[,] matrix)
         {
             IList<Cluster> clusters = new List<Cluster>();
 

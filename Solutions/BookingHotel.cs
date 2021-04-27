@@ -31,7 +31,7 @@ namespace Challenges.Solutions.BookingHotel
         public int WeekendPriceReward { get; set; }
     }
 
-    public static class BookingHotel
+    public static class ChallengeSolution
     {
         private static Hotel[] hotels = new Hotel[]
         {
@@ -40,7 +40,7 @@ namespace Challenges.Solutions.BookingHotel
             new Hotel { Name = "Ridgewood", Classification = 5, WeekPriceRegular = 220, WeekPriceReward = 100, WeekendPriceRegular = 150, WeekendPriceReward = 40 },
         };
 
-        public static string Solution(string input)
+        public static string Solve(string input)
         {
             var split = input.Replace(" ", string.Empty).Split(":");
             string[] datesStr = split[1].Split(",");

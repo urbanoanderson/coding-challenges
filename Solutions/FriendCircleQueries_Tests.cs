@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace Challenges.Solutions.FriendCircleQueries
 {
-    public class FriendCircleQueries_Tests
+    public class ChallengeSolution_Tests
     {
         private static readonly object[] testcases =
         {
@@ -35,7 +35,7 @@ namespace Challenges.Solutions.FriendCircleQueries
         [Test, TestCaseSource(nameof(testcases))]
         public void Tests(int[][] input, int[] expected)
         {
-            int[] result = FriendCircleQueries.Solution(input);
+            int[] result = ChallengeSolution.Solve(input);
             Assert.IsTrue(result.SequenceEqual(expected));
         }
     }

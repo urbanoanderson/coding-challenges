@@ -2,7 +2,7 @@
 
 namespace Challenges.Solutions.MaxArraySum
 {
-    public class MaxArraySum_Tests
+    public class ChallengeSolution_Tests
     {
         [TestCase(new int[] { 3, 5, -7, 8, 10 }, 15)]
         [TestCase(new int[] { 2, 1, 5, 8, 4 }, 11)]
@@ -10,7 +10,7 @@ namespace Challenges.Solutions.MaxArraySum
         [TestCase(new int[] { -2, 3, 4, 5, -3, -1, 9 }, 17)]
         public void Tests(int[] input, int expected)
         {
-            int result = MaxArraySum.CalculateSubsetSum(input);
+            var result = ChallengeSolution.Solve(input);
             Assert.IsTrue(result == expected);
         }
     }
