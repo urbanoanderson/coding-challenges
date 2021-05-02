@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Linq;
-using Challenges.Common;
 using NUnit.Framework;
 
 namespace Challenges.Solutions.ClimbingLeaderboard
@@ -9,6 +8,18 @@ namespace Challenges.Solutions.ClimbingLeaderboard
     {
         private static readonly object[] testcases =
         {
+            new object[]
+            {
+                new List<int> { 50 },
+                new List<int> { 60 },
+                new List<int> { 1 },
+            },
+            new object[]
+            {
+                new List<int> { 50 },
+                new List<int> { 40 },
+                new List<int> { 2 },
+            },
             new object[]
             {
                 new List<int> { 100, 90, 90, 80 },
@@ -33,7 +44,7 @@ namespace Challenges.Solutions.ClimbingLeaderboard
         public void Tests(List<int> ranked, List<int> player, List<int> expected)
         {
             var result = ChallengeSolution.Solve(ranked, player);
-            Assert.IsTrue(result.SequenceEqual(expected), TestHelper.GetTestErrorMessage(result));
+            Assert.IsTrue(result.SequenceEqual(expected));
         }
     }
 }
