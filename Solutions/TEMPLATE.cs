@@ -1,5 +1,5 @@
 ﻿/*
-    A template for creating new solutions
+    Source: <LINK_FOR_THE_CHALLENGE>
 
     Solution Author: Anderson Urbano
 */
