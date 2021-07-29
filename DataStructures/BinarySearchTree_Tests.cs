@@ -7,7 +7,7 @@ namespace CodingChallenges.DataStructures
 {
     public class BinarySearchTree_Tests
     {
-        private int[] sampleItems = { 5, 2, 4, 1, 3 };
+        private readonly int[] sampleItems = { 5, 2, 4, 1, 3 };
 
         [Test]
         public void Find_PassNullItem_ThrowsArgumentNullException()

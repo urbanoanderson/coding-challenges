@@ -6,7 +6,7 @@ namespace CodingChallenges.DataStructures
 {
     public class Heap_Tests
     {
-        private int[] sampleMaxHeap = { 100, 19, 36, 17, 3, 25, 1, 2, 7 };
+        private readonly int[] sampleMaxHeap = { 100, 19, 36, 17, 3, 25, 1, 2, 7 };
 
         [Test]
         public void Insert_PassNullItem_ThrowsArgumentNullException()

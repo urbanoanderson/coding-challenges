@@ -20,9 +20,9 @@ namespace CodingChallenges.DataStructures
 
     public class Heap<T> where T : IEquatable<T>
     {
-        private List<T> items;
+        private readonly List<T> items;
 
-        private Func<T, T, bool> shouldBeParentFunc;
+        private readonly Func<T, T, bool> shouldBeParentFunc;
         public Heap(Func<T, T, bool> shouldBeParentFunc)
         {
             this.shouldBeParentFunc = shouldBeParentFunc;
