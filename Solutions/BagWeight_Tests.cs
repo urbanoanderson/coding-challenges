@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace Challenges.Solutions.BagWeight
+namespace CodingChallenges.Solutions.BagWeight
 {
     public class BagWeight_Tests
     {

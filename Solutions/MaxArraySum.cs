@@ -1,12 +1,10 @@
 ﻿/*
     Source: https://www.hackerrank.com/challenges/max-array-sum
-
-    Solution Author: Anderson Urbano
 */
 
 using System;
 
-namespace Challenges.Solutions.MaxArraySum
+namespace CodingChallenges.Solutions.MaxArraySum
 {
     public static class ChallengeSolution
     {

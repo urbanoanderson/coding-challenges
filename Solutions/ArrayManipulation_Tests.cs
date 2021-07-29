@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace Challenges.Solutions.ArrayManipulation
+namespace CodingChallenges.Solutions.ArrayManipulation
 {
     public class ChallengeSolution_Tests
     {

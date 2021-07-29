@@ -1,8 +1,6 @@
 /*
     Source: https://medium.com/@alexgolec/google-interview-problems-ratio-finder-d7aa8bf201e3
 
-    Solution Author: Anderson Urbano
-
     Problem: Given a set of convertion ratios for different measure units,
     calculate indirect ratios from one unit to another.
 
@@ -13,7 +11,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Challenges.Solutions.RatioFinder
+namespace CodingChallenges.Solutions.RatioFinder
 {
     public class RatioFinder
     {

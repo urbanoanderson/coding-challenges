@@ -1,8 +1,4 @@
 /*
-    Source: Guilherme Henrique
-
-    Solution Author: Anderson Urbano
-
     Problem: Given a matrix of booleans, find out how many clusters of true values exist.
     A cluster is a set of same values together horizontally or vertically (not diagonally)
 
@@ -13,7 +9,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Challenges.Solutions.MatrixClusterCount
+namespace CodingChallenges.Solutions.MatrixClusterCount
 {
     public class Cluster
     {

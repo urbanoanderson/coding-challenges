@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace Challenges.Solutions.FormingMagicSquare
+namespace CodingChallenges.Solutions.FormingMagicSquare
 {
     public class ChallengeSolution_Tests
     {

@@ -1,7 +1,7 @@
-using Challenges.Common;
+using CodingChallenges.Common;
 using NUnit.Framework;
 
-namespace Challenges.Solutions.BookingHotel
+namespace CodingChallenges.Solutions.BookingHotel
 {
     public class ChallengeSolution_Tests
     {

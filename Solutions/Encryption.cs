@@ -1,13 +1,11 @@
 ﻿/*
     Source: https://www.hackerrank.com/challenges/encryption/
-
-    Solution Author: Anderson Urbano
 */
 
 using System;
 using System.Text;
 
-namespace Challenges.Solutions.Encryption
+namespace CodingChallenges.Solutions.Encryption
 {
     public static class ChallengeSolution
     {

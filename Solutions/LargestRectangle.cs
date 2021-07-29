@@ -1,8 +1,6 @@
 /*
     Source: https://www.hackerrank.com/challenges/largest-rectangle/problem
 
-    Solution Author: Anderson Urbano
-
     Problem: Skyline Real Estate Developers is planning to demolish a number of old,
     unoccupied buildings and construct a shopping mall in their place.
     Your task is to find the largest solid area in which the mall can be constructed.
@@ -11,7 +9,7 @@
 
 using System;
 
-namespace Challenges.Solutions.LargestRectangle
+namespace CodingChallenges.Solutions.LargestRectangle
 {
     public static class ChallengeSolution
     {

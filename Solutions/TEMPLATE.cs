@@ -1,12 +1,10 @@
 ﻿/*
-    Source: <LINK_FOR_THE_CHALLENGE>
-
-    Solution Author: Anderson Urbano
+    Source: <LINK_FOR_THE_CHALLENGE_DESCRIPTION>
 */
 
 using System;
 
-namespace Challenges.Solutions.TEMPLATE
+namespace CodingChallenges.Solutions.TEMPLATE
 {
     public static class ChallengeSolution
     {

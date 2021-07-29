@@ -1,7 +1,7 @@
-using Challenges.Common;
+using CodingChallenges.Common;
 using NUnit.Framework;
 
-namespace Challenges.Solutions.Encryption
+namespace CodingChallenges.Solutions.Encryption
 {
     public class ChallengeSolution_Tests
     {

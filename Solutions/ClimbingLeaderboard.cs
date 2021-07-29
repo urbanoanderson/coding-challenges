@@ -1,13 +1,11 @@
 ﻿/*
     Source: https://www.hackerrank.com/challenges/climbing-the-leaderboard
-
-    Solution Author: Anderson Urbano
 */
 
 using System;
 using System.Collections.Generic;
 
-namespace Challenges.Solutions.ClimbingLeaderboard
+namespace CodingChallenges.Solutions.ClimbingLeaderboard
 {
     public static class ChallengeSolution
     {

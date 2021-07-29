@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace Challenges.Solutions.ParallelProcessing
+namespace CodingChallenges.Solutions.ParallelProcessing
 {
     public class ChallengeSolution_Tests
     {

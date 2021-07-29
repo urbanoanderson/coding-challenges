@@ -1,6 +1,6 @@
 using System;
 
-namespace Challenges.Common
+namespace CodingChallenges.Common
 {
     public static class TestHelper
     {

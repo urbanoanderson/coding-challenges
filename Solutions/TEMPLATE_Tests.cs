@@ -1,7 +1,7 @@
-using Challenges.Common;
+using CodingChallenges.Common;
 using NUnit.Framework;
 
-namespace Challenges.Solutions.TEMPLATE
+namespace CodingChallenges.Solutions.TEMPLATE
 {
     public class ChallengeSolution_Tests
     {

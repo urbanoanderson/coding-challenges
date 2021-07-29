@@ -1,14 +1,12 @@
 ﻿/*
     Source: https://github.com/chesman12/booking-hotel
-
-    Solution Author: Anderson Urbano
 */
 
 using System;
 using System.Linq;
 using System.Globalization;
 
-namespace Challenges.Solutions.BookingHotel
+namespace CodingChallenges.Solutions.BookingHotel
 {
     public enum ClientType
     {

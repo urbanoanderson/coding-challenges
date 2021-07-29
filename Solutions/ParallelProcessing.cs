@@ -1,12 +1,10 @@
 ﻿/*
     Source: https://www.hackerrank.com/test/33gp893pqhs/questions/7qot7o5lplm
-
-    Solution Author: Anderson Urbano
 */
 
 using System.Collections.Generic;
 
-namespace Challenges.Solutions.ParallelProcessing
+namespace CodingChallenges.Solutions.ParallelProcessing
 {
     public static class ChallengeSolution
     {

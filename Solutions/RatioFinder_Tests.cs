@@ -1,8 +1,8 @@
 ﻿using System;
-using Challenges.Common;
+using CodingChallenges.Common;
 using NUnit.Framework;
 
-namespace Challenges.Solutions.RatioFinder
+namespace CodingChallenges.Solutions.RatioFinder
 {
     public class RatioFinder_Tests
     {

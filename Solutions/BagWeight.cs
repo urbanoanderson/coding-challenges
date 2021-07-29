@@ -1,8 +1,4 @@
 ﻿/*
-    Source: life
-
-    Solution Author: Anderson Urbano
-
     Problem: In a bag of items, each item has a weight represented by
     an integer. If someone can only carry a max o 2 items at a time
     from the bag and has a maximum weight capacity of W, what is the
@@ -12,7 +8,7 @@
 
 using System;
 
-namespace Challenges.Solutions.BagWeight
+namespace CodingChallenges.Solutions.BagWeight
 {
     public static class ChallengeSolution
     {

@@ -1,13 +1,11 @@
 ﻿/*
     Source: https://www.hackerrank.com/challenges/candies
-
-    Solution Author: Anderson Urbano
 */
 
 using System;
 using System.Linq;
 
-namespace Challenges.Solutions.Candies
+namespace CodingChallenges.Solutions.Candies
 {
     public static class ChallengeSolution
     {

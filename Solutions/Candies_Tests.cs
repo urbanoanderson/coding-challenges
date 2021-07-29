@@ -1,7 +1,7 @@
-using Challenges.Common;
+using CodingChallenges.Common;
 using NUnit.Framework;
 
-namespace Challenges.Solutions.Candies
+namespace CodingChallenges.Solutions.Candies
 {
     public class Candies_Tests
     {

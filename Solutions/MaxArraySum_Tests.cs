@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace Challenges.Solutions.MaxArraySum
+namespace CodingChallenges.Solutions.MaxArraySum
 {
     public class ChallengeSolution_Tests
     {

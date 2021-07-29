@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace Challenges.Solutions.MatrixClusterCount
+namespace CodingChallenges.Solutions.MatrixClusterCount
 {
     public class MatrixClusterCount_Tests
     {

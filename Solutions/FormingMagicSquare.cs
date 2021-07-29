@@ -1,13 +1,11 @@
 ﻿/*
     Source: https://www.hackerrank.com/challenges/magic-square-forming
-
-    Solution Author: Anderson Urbano
 */
 
 using System;
 using System.Collections.Generic;
 
-namespace Challenges.Solutions.FormingMagicSquare
+namespace CodingChallenges.Solutions.FormingMagicSquare
 {
     public static class ChallengeSolution
     {

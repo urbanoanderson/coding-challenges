@@ -1,7 +1,7 @@
 using System.Linq;
 using NUnit.Framework;
 
-namespace Challenges.Solutions.FriendCircleQueries
+namespace CodingChallenges.Solutions.FriendCircleQueries
 {
     public class ChallengeSolution_Tests
     {

@@ -1,10 +1,5 @@
 ﻿/*
-    Source: life
-
-    Solution Author: Anderson Urbano
-
-    Problem:
-        Create a data structure with 2 basic operation, first is to add an integer range
+    Problem: Create a data structure with 2 basic operation, first is to add an integer range
         and a value object. Second operation is given an index retrieve the objects for
         all ranges that have the index. The structure must make an internal separation
         of intersecting ranges.
@@ -13,7 +8,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Challenges.Solutions.RangeDictionary
+namespace CodingChallenges.Solutions.RangeDictionary
 {
     public class RangeDictionary<T>
     {
