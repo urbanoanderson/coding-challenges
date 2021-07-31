@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace CodingChallenges.DataStructures
 {
@@ -22,6 +23,14 @@ namespace CodingChallenges.DataStructures
         }
 
         public int Count { get; private set; }
+
+        public List<T> ToList()
+        {
+            List<T> result = new List<T>();
+            this.TraversalInOrder((item) => result.Add(item));
+
+            return result;
+        }
 
         public void TraversalPreOrder(Action<T> action)
         {
@@ -147,6 +156,9 @@ namespace CodingChallenges.DataStructures
         }
         public void Remove(T item)
         {
+            if (item == null)
+                throw new ArgumentNullException(nameof(item));
+
             this.root = this.Remove(this.root, item);
         }
 
