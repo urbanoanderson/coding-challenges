@@ -147,14 +147,78 @@ namespace CodingChallenges.DataStructures
         }
         public void Remove(T item)
         {
-            throw new NotImplementedException();
+            this.root = this.Remove(this.root, item);
+        }
+
+        private TreeNode Remove(TreeNode subtree, T item)
+        {
+            // Found a leaf
+            if (subtree == null)
+                return null;
+
+            // Found the item to remove
+            else if (subtree.Value.Equals(item))
+            {
+                // item has no children
+                if (subtree.LeftChild == null && subtree.RightChild == null)
+                {
+                    return null;
+                }
+
+                // item only has left child
+                else if (subtree.RightChild == null)
+                {
+                    TreeNode result = subtree.LeftChild;
+                    subtree.LeftChild = null;
+                    return result;
+                }
+
+                // item only has right child
+                else if (subtree.LeftChild == null)
+                {
+                    TreeNode result = subtree.RightChild;
+                    subtree.RightChild = null;
+                    return result;
+                }
+
+                /*
+                    item has two children:
+                    We have to find the next minimum value to assume the place of the removed item
+                    and them remove the original node of the next minimum value (that will have 0 or 1 child)
+                */
+                else
+                {
+                    TreeNode nextMinimum = subtree.RightChild;
+
+                    while (nextMinimum.LeftChild != null)
+                        nextMinimum = nextMinimum.LeftChild;
+
+                    subtree.Value = nextMinimum.Value;
+                    subtree.RightChild = this.Remove(subtree.RightChild, nextMinimum.Value);
+                    return subtree;
+                }
+            }
+
+            // Search on the left
+            else if (this.ShouldBeLeftChild(item, subtree.Value))
+            {
+                subtree.LeftChild = this.Remove(subtree.LeftChild, item);
+                return subtree;
+            }
+
+            // Search on the right
+            else
+            {
+                subtree.RightChild = this.Remove(subtree.RightChild, item);
+                return subtree;
+            }
         }
 
         // This implementation allows two or more of the same item to be added to the tree
         // and also sets a convention of adding equal values as left child nodes
-        private bool ShouldBeLeftChild(T child, T parent)
+        private bool ShouldBeLeftChild(T childItem, T parentItem)
         {
-            return (child.CompareTo(parent) <= 0);
+            return (childItem.CompareTo(parentItem) <= 0);
         }
     }
 }

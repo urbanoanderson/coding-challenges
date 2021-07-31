@@ -7,13 +7,13 @@ using System.Collections.Generic;
 
 namespace CodingChallenges.DataStructures
 {
-    public class DisjointedSets
+    public class DisjointSets
     {
         private readonly Dictionary<int, int> arr;
 
         private readonly Dictionary<int, int> sizes;
 
-        public DisjointedSets()
+        public DisjointSets()
         {
             this.arr = new Dictionary<int, int>();
             this.sizes = new Dictionary<int, int>();

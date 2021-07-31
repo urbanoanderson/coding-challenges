@@ -8,7 +8,7 @@ namespace CodingChallenges.Algorithms
         Space complexity:
             O(n)
     */
-    public class BinarySearch
+    public static class BinarySearch
     {
         public static bool Search(int[] arr, int item)
         {

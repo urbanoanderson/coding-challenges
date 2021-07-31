@@ -101,6 +101,33 @@ namespace CodingChallenges.DataStructures
             Assert.IsTrue(result.SequenceEqual(expected));
         }
 
+        [Test]
+        public void Remove_PassExistantItem_GetCorrectOrder()
+        {
+            int[] input = { 5, 3, 8, 2, 4, 7, 9, 1, 6, 10 };
+
+            BinarySearchTree<int> tree = new BinarySearchTree<int>();
+
+            foreach (var item in input)
+                tree.Insert(item);
+
+            Action<int, int[]> check = (elemToRemove, expectedResult) =>
+            {
+                List<int> result = new List<int>();
+                tree.Remove(elemToRemove);
+                tree.TraversalInOrder((item) => result.Add(item));
+                Assert.IsTrue(result.SequenceEqual(expectedResult));
+            };
+
+            check(2, new int[] { 1, 3, 4, 5, 6, 7, 8, 9, 10 });
+            check(4, new int[] { 1, 3, 5, 6, 7, 8, 9, 10 });
+            check(9, new int[] { 1, 3, 5, 6, 7, 8, 10 });
+            check(10, new int[] { 1, 3, 5, 6, 7, 8 });
+            check(3, new int[] { 1, 5, 6, 7, 8 });
+            check(8, new int[] { 1, 5, 6, 7 });
+            check(5, new int[] { 1, 6, 7 });
+        }
+
         private BinarySearchTree<int> GetPreloadedTree()
         {
             BinarySearchTree<int> tree = new BinarySearchTree<int>();

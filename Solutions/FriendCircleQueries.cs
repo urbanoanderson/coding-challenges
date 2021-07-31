@@ -10,7 +10,7 @@ namespace CodingChallenges.Solutions.FriendCircleQueries
     {
         public static int[] Solve(int[][] queries)
         {
-            DisjointedSets userMap = new DisjointedSets();
+            DisjointSets userMap = new DisjointSets();
             int[] result = new int[queries.Length];
 
             for (int i = 0; i < queries.Length; i++)

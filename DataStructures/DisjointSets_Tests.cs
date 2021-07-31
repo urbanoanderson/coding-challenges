@@ -3,12 +3,12 @@ using NUnit.Framework;
 
 namespace CodingChallenges.DataStructures
 {
-    public class DisjointedSets_Tests
+    public class DisjointSets_Tests
     {
         [Test]
         public void Union_PassTwoElements_UpdateMaxSetSize()
         {
-            DisjointedSets d = new DisjointedSets();
+            DisjointSets d = new DisjointSets();
 
             Assert.IsTrue(d.MaxSetSize == 0);
             d.Union(1, 2);
@@ -22,7 +22,7 @@ namespace CodingChallenges.DataStructures
         [Test]
         public void IsSameSet_PassTwoElements_ReturnsIfTheyAreInSameSet()
         {
-            DisjointedSets d = new DisjointedSets();
+            DisjointSets d = new DisjointSets();
 
             Assert.IsFalse(d.IsSameSet(1, 2));
             d.InitUnitSetIfNew(1);

@@ -6,14 +6,14 @@ namespace CodingChallenges.DataStructures
 {
     /* MAX HEAPS are heaps where the parents are always greater or equal then their children */
     public class MaxHeap<T> : Heap<T>
-        where T : IComparable, IEquatable<T>
+        where T : IComparable<T>, IEquatable<T>
     {
         public MaxHeap() : base((a, b) => a.CompareTo(b) > 0) { }
     }
 
     /* MIN HEAPS are heaps where the parents are always smaller or equal then their children */
     public class MinHeap<T> : Heap<T>
-        where T : IComparable, IEquatable<T>
+        where T : IComparable<T>, IEquatable<T>
     {
         public MinHeap() : base((a, b) => a.CompareTo(b) < 0) { }
     }
@@ -22,10 +22,10 @@ namespace CodingChallenges.DataStructures
     {
         private readonly List<T> items;
 
-        private readonly Func<T, T, bool> shouldBeParentFunc;
-        public Heap(Func<T, T, bool> shouldBeParentFunc)
+        private readonly Func<T, T, bool> hasHighestPriority;
+        public Heap(Func<T, T, bool> hasHighestPriority)
         {
-            this.shouldBeParentFunc = shouldBeParentFunc;
+            this.hasHighestPriority = hasHighestPriority;
             this.items = new List<T>();
         }
 
@@ -46,7 +46,7 @@ namespace CodingChallenges.DataStructures
             int itemIdx = this.LastIdx();
             int parentIdx = this.ParentIdx(itemIdx);
 
-            while (this.shouldBeParentFunc(this.items[itemIdx], this.items[parentIdx]))
+            while (this.hasHighestPriority(this.items[itemIdx], this.items[parentIdx]))
             {
                 Utils.Swap(this.items, parentIdx, itemIdx);
                 itemIdx = parentIdx;
@@ -119,9 +119,9 @@ namespace CodingChallenges.DataStructures
             else if (!leftChildIdxExists && rightChildIdxExists)
                 heirIdx = rightChildIdx;
             else
-                heirIdx = this.shouldBeParentFunc(this.items[leftChildIdx], this.items[rightChildIdx]) ? leftChildIdx : rightChildIdx;
+                heirIdx = this.hasHighestPriority(this.items[leftChildIdx], this.items[rightChildIdx]) ? leftChildIdx : rightChildIdx;
 
-            if (this.shouldBeParentFunc(this.items[heirIdx], this.items[idx]))
+            if (this.hasHighestPriority(this.items[heirIdx], this.items[idx]))
             {
                 Utils.Swap(this.items, idx, heirIdx);
                 this.HeapifyDown(heirIdx);
