@@ -63,10 +63,10 @@ namespace CodingChallenges.Solutions.Knapsack
 
             SolutionInstance solutionAdding = currentSolution;
 
-            if (currentSolution.CanAddItem(itemIdx, values, weights, stock))
+            if (currentSolution.CanAddItem(itemIdx, weights, stock))
             {
                 solutionAdding = SolutionInstance.Clone(currentSolution);
-                solutionAdding.AddItem(itemIdx, values, weights, stock);
+                solutionAdding.AddItem(itemIdx, values, weights);
                 solutionAdding = RecursiveSolve(values, weights, stock, solutionAdding, itemIdx, solutionMap);
             }
 
@@ -82,13 +82,13 @@ namespace CodingChallenges.Solutions.Knapsack
             public uint ValueSum { get; set; }
             public uint[] ChosenItems { get; set; }
 
-            public bool CanAddItem(int itemIdx, uint[] values, uint[] weights, uint[] stock)
+            public bool CanAddItem(int itemIdx, uint[] weights, uint[] stock)
             {
                 return this.CapacityLeft >= weights[itemIdx]
                     && this.ChosenItems[itemIdx] < stock[itemIdx];
             }
 
-            public void AddItem(int itemIdx, uint[] values, uint[] weights, uint[] stock)
+            public void AddItem(int itemIdx, uint[] values, uint[] weights)
             {
                 this.CapacityLeft -= weights[itemIdx];
                 this.ValueSum += values[itemIdx];
