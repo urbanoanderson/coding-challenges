@@ -33,6 +33,11 @@ namespace CodingChallenges.Solutions.Knapsack
                 new uint[] { 1, 3, 5 }, new uint[] { 5, 3, 1 }, 5u,
                 new uint[] { 0, 1, 1 }, 8u,
             },
+            new object[]
+            {
+                new uint[] { 24, 18, 18, 10 }, new uint[] { 24, 10, 10, 7 }, 25u,
+                new uint[] { 0, 0, 1, 1 }, 28u,
+            },
         };
 
         private static readonly object[] testcasesUnbounded =

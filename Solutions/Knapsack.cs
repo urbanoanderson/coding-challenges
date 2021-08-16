@@ -6,6 +6,7 @@
 */
 
 using System;
+using System.Collections.Generic;
 
 namespace CodingChallenges.Solutions.Knapsack
 {
@@ -32,6 +33,8 @@ namespace CodingChallenges.Solutions.Knapsack
             if (values == null || weights == null || stock == null || (values.Length != weights.Length) || (values.Length != stock.Length))
                 throw new InvalidOperationException();
 
+            Dictionary<(int, uint, uint), SolutionInstance> solutionMap = new Dictionary<(int, uint, uint), SolutionInstance>();
+
             SolutionInstance bestSolution = new SolutionInstance()
             {
                 CapacityLeft = capacity,
@@ -39,18 +42,24 @@ namespace CodingChallenges.Solutions.Knapsack
                 ChosenItems = new uint[values.Length],
             };
 
-            bestSolution = RecursiveSolve(values, weights, stock, bestSolution, 0);
+            bestSolution = RecursiveSolve(values, weights, stock, bestSolution, 0, solutionMap);
 
             return (bestSolution.ChosenItems, bestSolution.ValueSum);
         }
 
-        private static SolutionInstance RecursiveSolve(uint[] values, uint[] weights, uint[] stock, SolutionInstance currentSolution, int itemIdx)
+        private static SolutionInstance RecursiveSolve(uint[] values, uint[] weights, uint[] stock, SolutionInstance currentSolution, int itemIdx,
+            Dictionary<(int, uint, uint), SolutionInstance> solutionMap)
         {
             if (itemIdx >= values.Length || currentSolution.CapacityLeft <= 0)
                 return currentSolution;
 
+            var solutionId = (itemIdx, currentSolution.CapacityLeft, currentSolution.ValueSum);
+
+            if (solutionMap.ContainsKey(solutionId))
+                return solutionMap[solutionId];
+
             SolutionInstance solutionNotAdding = SolutionInstance.Clone(currentSolution);
-            solutionNotAdding = RecursiveSolve(values, weights, stock, solutionNotAdding, itemIdx + 1);
+            solutionNotAdding = RecursiveSolve(values, weights, stock, solutionNotAdding, itemIdx + 1, solutionMap);
 
             SolutionInstance solutionAdding = currentSolution;
 
@@ -58,10 +67,11 @@ namespace CodingChallenges.Solutions.Knapsack
             {
                 solutionAdding = SolutionInstance.Clone(currentSolution);
                 solutionAdding.AddItem(itemIdx, values, weights, stock);
-                solutionAdding = RecursiveSolve(values, weights, stock, solutionAdding, itemIdx);
+                solutionAdding = RecursiveSolve(values, weights, stock, solutionAdding, itemIdx, solutionMap);
             }
 
             currentSolution = SolutionInstance.GetBestSolution(solutionNotAdding, solutionAdding);
+            solutionMap.Add(solutionId, currentSolution);
 
             return currentSolution;
         }
